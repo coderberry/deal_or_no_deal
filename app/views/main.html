@@ -1,0 +1,37 @@
+<table id="board">
+  <tbody>
+    <td class="prize-container">
+      <ul>
+        <li ng-repeat="amount in lowAmounts()" ng-class="amount.class()">{{amount.value | currency}}</li>
+      </ul>
+    </td>
+    <td id="board-container">
+      <h3 id="game-title">Deal or No Deal</h3>
+      <ul id="briefcases">
+        <li ng-repeat="briefcase in briefcases" ng-class="briefcase.class()">
+          <div ng-click="chooseBriefcase(briefcase)">{{briefcase.id}}</div>
+        </li>
+      </ul>
+    </td>
+    <td class="prize-container">
+      <ul>
+        <li ng-repeat="amount in highAmounts()" ng-class="amount.class()">{{amount.value | currency}}</li>
+      </ul>
+    </td>
+  </tbody>
+</table>
+
+<h3>{{msg}}</h3>
+
+<h1>{{currentOffer()}}</h1>
+
+<!-- <div class="hero-unit">
+  <h1>Cheerio!</h1>
+  <p>You now have</p>
+  <ul>
+      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
+  </ul>
+  <p>installed.</p>
+  <h3>Enjoy coding! - Yeoman</h3>
+</div>
+ -->

@@ -1,0 +1,100 @@
+
+/* Will be compiled down to a single stylesheet with your sass files */
+#board {
+  background-color: black;
+  font-family: 'Unica One', Helvetica;
+  margin: 20px auto;
+
+  #game-title {
+    margin: 0px;
+    font-size: 2.7em;
+    text-align: center;
+    color: yellow;
+  }
+
+  td {
+    padding: 0px;
+  }
+}
+
+.prize-container {
+  width: 120px;
+  background-color: black;
+  ul {
+    margin: 0px;
+    padding: 0px;
+    li {
+      text-shadow: 0px 0px 8px #FFFFFF;
+      background: #e6f0a3; /* Old browsers */
+      background: -moz-linear-gradient(top,  #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6f0a3), color-stop(50%,#d2e638), color-stop(51%,#c3d825), color-stop(100%,#dbf043)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+
+      display: block;
+      border: 1px solid #000;
+      width: 110px;
+      padding: 5px;
+      margin: 3px;
+      text-align: right;
+      font-weight: bold;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      list-style: none;
+
+      &.disabled {
+        background: #768515; /* Old browsers */
+        background: -moz-linear-gradient(top,  #768515 0%, #56600c 50%, #4a520e 51%, #616d09 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#768515), color-stop(50%,#56600c), color-stop(51%,#4a520e), color-stop(100%,#616d09)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #768515 0%,#56600c 50%,#4a520e 51%,#616d09 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #768515 0%,#56600c 50%,#4a520e 51%,#616d09 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #768515 0%,#56600c 50%,#4a520e 51%,#616d09 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #768515 0%,#56600c 50%,#4a520e 51%,#616d09 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#768515', endColorstr='#616d09',GradientType=0 ); /* IE6-9 */
+      }
+    }
+  }
+}
+#board-container {
+  width: 540px;
+}
+
+#briefcases {
+  margin: 0px;
+  list-style: none;
+  li {
+    cursor: pointer;
+    float: left;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: transparent url('../images/briefcase_80.png') top left no-repeat;
+    margin: 0 3px;
+    background-size: 70px 70px;
+
+    &.disabled {
+      background-image: url('../images/briefcase_80_shade.png');
+    }
+
+    &.chosen {
+      display: none;
+    }
+    
+    div {
+      text-shadow: 0px 0px 8px #FFFFFF;
+      text-decoration: none;
+      color: black;
+      font-family: 'Unica One', Helvetica;
+      font-weight: bold;
+      font-size: 2.0em;
+      position: relative;
+      left: -2px;
+      top: 18px;
+      text-align: center;
+    }
+  }
+}
